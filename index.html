@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="google" value="notranslate">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="application-name" content="">
+		<meta name="msapplication-tooltip" content="">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-starturl" content="https://csssr.github.io/csssr-project-template/">
+		<meta name="msapplication-tap-highlight" content="no">
+		<title>Musopen</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page">
+		<div class="content-wrapper">
+			<header class="header">
+				<div class="header__logo">
+					<svg width="185px" height="24px"><use xlink:href="#icon_logo"></use></svg>
+				</div>
+				<div class="header__search-wrapper">
+					<form class="search">
+						<input type="search" placeholder="Search..." class="search__search-input" />
+						<svg width="15px" height="15px" class="search__search-icon"><use xlink:href="#icon_search"></use></svg>
+					</form>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<a href="/" class="header__nav-link">Music</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="/" class="header__nav-link">Sheet music</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="/" class="header__nav-link">Raio</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="/" class="header__nav-link">Education</a>
+						</li>
+					</ul>
+					<div class="header__user-block">
+						<div class="header__user-icon">
+							<a href="/" class="header__user-link">M</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+		</div>
+		<div class="search-page">
+			<div class="content-wrapper">
+				<div class="page-title">
+					<h1 class="page-title__title">Search</h1>
+					<ul class="tabs">
+						<li class="tabs__tabs-item">
+							<a class="tabs__tabs-link tabs__tabs-link_active">All</a>
+						</li>
+						<li class="tabs__tabs-item">
+							<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							<a href="/" class="tabs__tabs-link">Sheet Music</a>
+						</li>
+						<li class="tabs__tabs-item">
+							<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							<a href="/" class="tabs__tabs-link">Recordings</a>
+						</li>
+					</ul>
+					<button class="button button_filter button_small">
+						<svg width="17px" height="13px"><use xlink:href="#icon_settings"></use></svg>
+						<div class="button__text button__text_filter">Search Filters</div>
+					</button>
+				</div>
+			</div>
+			<table class="search-table">
+				<thead align="left" class="search-table__head">
+					<tr class="search-table__row search-table__row_header">
+						<th width="392px" class="search-table__cell search-table__cell_header">Title</th>
+						<th width="239px" class="search-table__cell search-table__cell_header">Composer</th>
+						<th width="127px" class="search-table__cell search-table__cell_header">Form</th>
+						<th width="185px" class="search-table__cell search-table__cell_header">Instrument</th>
+						<th width="150px" class="search-table__cell search-table__cell_header">Period</th>
+						<th width="77px" class="search-table__cell search-table__cell_header">Rating</th>
+					</tr>
+				</thead>
+				<tbody align="left" class="search-table__body">
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_sheet"></use></svg>
+							</div>Organ Symphony</td>
+						<td width="239px" class="search-table__cell">Denis Pisarevsky</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">Organ</td>
+						<td width="150px" class="search-table__cell">21st Century</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+					<tr class="search-table__row">
+						<td width="392px" class="search-table__cell">
+							<div class="search-table__icon">
+								<svg width="15px" height="15px"><use xlink:href="#icon_note"></use></svg>
+							</div>Symphony in D minor</td>
+						<td width="239px" class="search-table__cell">César Franck</td>
+						<td width="127px" class="search-table__cell">Symphony</td>
+						<td width="185px" class="search-table__cell">String Quartet</td>
+						<td width="150px" class="search-table__cell">Romantic</td>
+						<td width="77px" class="search-table__cell">
+							<div class="rating">
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star_filled"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+								<svg width="12px" height="12px"><use xlink:href="#icon_star"></use></svg>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="search-page__pagination">
+				<div class="pagination">
+					<div class="pagination__link">
+						<a class="button button_link button_small" href="/">« Prev</a>
+					</div>
+					<div class="pagination__info">
+						<div class="pagination__pages">Page 2 of 13</div>
+						<div class="pagination__results">Showing 27 out 142 Results</div>
+					</div>
+					<div class="pagination__link">
+						<a class="button button_link button_small" href="/">Next »</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-wrapper">
+				<div class="footer">
+					<div class="footer__social">
+						<ul class="social">
+							<li class="social__item">
+								<a href="/" class="social__link">facebook
+									<svg width="33px" height="33px"><use xlink:href="#icon_facebook"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="/" class="social__link">twitter
+									<svg width="33px" height="33px"><use xlink:href="#icon_twitter"></use></svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item">
+								<span class="footer__nav-heading">Get Started</span>
+								<ul class="footer__nav-links-list">
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Sing In</a>
+									</li>
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Sing Up</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer__nav-item">
+								<span class="footer__nav-heading">Company</span>
+								<ul class="footer__nav-links-list">
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">About</a>
+									</li>
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Blog</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer__nav-item">
+								<span class="footer__nav-heading">Legal</span>
+								<ul class="footer__nav-links-list">
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Privacy Policy</a>
+									</li>
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Terms of Use</a>
+									</li>
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">DMCA</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer__nav-item">
+								<span class="footer__nav-heading">Resources</span>
+								<ul class="footer__nav-links-list">
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Hire a Teacher</a>
+									</li>
+									<li class="footer__nav-links-item">
+										<a href="/" class="footer__nav-link">Translate</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<script src="assets/scripts/app.min.js"></script>
+	</body>
+
+</html>
