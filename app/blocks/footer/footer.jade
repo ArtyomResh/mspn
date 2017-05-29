@@ -1,0 +1,42 @@
+include ../social/social
+
+mixin footer()
+	+b.footer&attributes(attributes)
+		block
+		+e.social
+			+social
+		+e('nav').nav
+			+e('ul').nav-list
+				+e('li').nav-item
+					+e('span').nav-heading Get Started
+					+e('ul').nav-links-list
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Sing In
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Sing Up
+
+				+e('li').nav-item
+					+e('span').nav-heading Company
+					+e('ul').nav-links-list
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') About
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Blog
+
+				+e('li').nav-item
+					+e('span').nav-heading Legal
+					+e('ul').nav-links-list
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Privacy Policy
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Terms of Use
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') DMCA
+
+				+e('li').nav-item
+					+e('span').nav-heading Resources
+					+e('ul').nav-links-list
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Hire a Teacher
+						+e('li').nav-links-item
+							+e('a').nav-link(href='/') Translate

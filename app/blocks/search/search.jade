@@ -1,0 +1,7 @@
+include ../icon/icon
+
+mixin search()
+	+b('form').search&attributes(attributes)
+		block
+		+e('input').search-input(type='search' placeholder='Search...')
+		+icon('search').search-icon(width='15px' height='15px')
