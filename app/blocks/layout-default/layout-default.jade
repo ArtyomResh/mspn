@@ -8,11 +8,5 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	+page
-		+header({
-			isLogged: true,
-			isSearching: true,
-			isMain: true,
-			userLetter: 'M'
-		})
 		block content
 		+scripts(['app.min.js'])

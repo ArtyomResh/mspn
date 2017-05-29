@@ -1,0 +1,11 @@
+include ../icon/icon
+
+mixin social()
+	+b('ul').social&attributes(attributes)
+		block
+		+e('li').item
+			+e('a').link(href='/') facebook
+				+icon('facebook')(width='33px' height='33px')
+		+e('li').item
+			+e('a').link(href='/') twitter
+				+icon('twitter')(width='33px' height='33px')
