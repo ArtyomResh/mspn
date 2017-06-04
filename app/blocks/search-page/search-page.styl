@@ -7,3 +7,101 @@
 		margin-bottom 90px
 		display flex
 		justify-content center
+
+	&__filter-button-wrapper
+		position relative
+
+		&::after
+			position absolute
+			top 100%
+			left calc(50% - 8px)
+			display block
+			size 15px
+			content ''
+			background-color color-page-background
+			/* stylelint-disable */
+			border-top-width 1px
+			border-right-width 0
+			border-bottom-width 0
+			border-left-width 1px
+			border-style solid
+			border-color color-dividers
+			/* stylelint-enable */
+			transform: rotate(45deg)
+
+	&__filter-popup
+		position absolute
+		top calc(100% + 8px)
+		right 0
+		padding-x 25px
+		padding-top 30px
+		padding-bottom 25px
+		width 412px
+		background-color color-page-background
+		border 1px solid color-dividers
+		border-radius 2px
+		/* stylelint-disable */
+		box-shadow 0 4px 8px 0 color-dividers
+		/* stylelint-enable */
+
+	&__field-wrapper
+		display flex
+		align-items center
+
+		&:not(:last-of-type)
+			margin-bottom 13px
+
+		&:nth-child(4)
+			margin-bottom 25px
+
+
+	&__label
+		margin-right auto
+		font-size 13px
+		font-weight bold
+		line-height 20px
+
+		&::first-letter
+			text-transform uppercase
+
+	&__input-wrapper
+		padding-x 8px
+		padding-top 8px
+		display flex
+		flex-wrap wrap
+		align-items center
+		width 259px
+		font-size 11px
+		line-height 20px
+		background-color white
+		border 1px solid color-dividers
+		/* stylelint-disable */
+		border-radius 2px
+		/* stylelint-enable */
+
+	&__input
+		margin-bottom 8px
+		padding-left 3px
+		width 40px
+		max-width 100%
+		height 22px
+		border none
+
+		&-tag
+			margin-right 8px
+			margin-bottom 8px
+			padding-x 8px
+			padding-y 1px
+			font-size 11px
+			line-height 20px
+			border 1px solid color-dividers
+			border-radius 2px
+
+		&-tag-icon
+			margin-left 4px
+
+	&__button-submit-text
+		padding-x 8px
+
+	&__sumbit-button
+		float right

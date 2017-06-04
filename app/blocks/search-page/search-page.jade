@@ -5,15 +5,40 @@ include ../search-table/search-table
 include ../pagination/pagination
 include ../footer/footer
 
+mixin search-from__field(name)
+	+e('div').field-wrapper
+		+e('label').label(for='search-filter_#{name}')= name
+		+e.input-wrapper
+			block
+			+e('input').input(type='text' name=name id='search-filter_#{name}')
+
+mixin search-form__tag(text)
+	+e('span').input-tag= text
+		+e.input-tag-icon
+			+icon('close')(width='8px' height='8px')
+
 mixin search-page()
 	+b.search-page&attributes(attributes)
 		block
 		+content-wrapper
 			+page-title('Search')
 				+tabs
-				+button()._filter._small
-					+icon('settings')(width='17px' height='13px')
-					+e.text._filter Search Filters
+				+b.search-page__filter-button-wrapper
+					+button()._filter._small
+						+icon('settings')(width='17px' height='13px')
+						+e.text._filter Search Filters
+					+b.search-page__filter-popup
+						+b('form').search-page__filter-form(action='/' method='get')
+							+search-from__field('composers')
+								+search-form__tag('Anton Bruckner')
+							+search-from__field('forms')
+								+search-form__tag('Etude')
+							+search-from__field('instruments')
+							+search-from__field('periods')
+								+search-form__tag('20th Century')
+								+search-form__tag('Romantic')
+							+e.sumbit-button
+								+button._small._filter(type='submit') Apply Filters
 		+search-table
 		+e.pagination
 			+pagination
