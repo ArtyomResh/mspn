@@ -1,0 +1,71 @@
+include ../header/header
+include ../button/button
+include ../page-title/page-title
+include ../icon/icon
+include ../footer/footer
+
+mixin feature-item({ icon, title, text, url})
+	+b('li').about__features-item
+		+b('a').about__features-link(href=url)
+			+b.about__features-icon
+				+icon(icon)(width='56px' height='56px')
+			+b('h3').about__features-title= title
+			+b.about__features-text= text
+
+mixin about()
+	+b.about&attributes(attributes)
+		block
+		+content-wrapper
+			+header({
+				isLogged: true,
+				isSearching: false,
+				isMain: true,
+				userLetter: 'M'
+			})
+		+content-wrapper
+			+page-title('About')
+				+button()._small-paddings._small Follow @Musopen on Twitter
+		+e.background
+			+icon('about-bg')(width='1029px' height='182px')
+		+e.text-wrapper
+			+e('p').text
+				| Musopen (www.musopen.org) is a 501(c)(3) non-profit focused on
+				| improving access and exposure to music by creating free resources
+				| and educational materials. We provide recordings, sheet music, and
+				| textbooks to the public for free, without copyright restrictions.
+				| Put simply, our mission is to set music free.
+			+e('p').text
+				| Musopen is a U.S. registered 501(c)(3) tax-deductible non-profit
+				| charity, operating out of Palo Alto, California. To verify our
+				| non-profit status, please click this link and search for Musopen.
+		+e('ul').features-list
+			+feature-item({
+				icon: 'people',
+				title: 'Team Musopen',
+				text: 'Meet the people behind Musopen.',
+				url: '#',
+			})
+			+feature-item({
+				icon: 'chat-cloud',
+				title: 'FAQs',
+				text: 'If you appreciate our efforts please consider helping us by volunteering or donating.',
+				url: '#',
+			})
+			+feature-item({
+				icon: 'people',
+				title: 'Press',
+				text: 'A list of all notable links to or mentions of Musopen.',
+				url: '#',
+			})
+			+feature-item({
+				icon: 'people',
+				title: 'Contact Us',
+				text: 'Have a question or found a bug? Click here to write us.',
+				url: '#',
+			})
+
+
+
+
+		+b.footer-wrapper
+			+footer

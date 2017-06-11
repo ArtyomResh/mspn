@@ -1,0 +1,11 @@
+extends /blocks/layout-default/layout-default
+include /blocks/header/header
+include /blocks/content-wrapper/content-wrapper
+include /blocks/page-title/page-title
+include /blocks/about/about
+
+block head
+	- var pageTitle = 'Musopen - About';
+
+block content
+	+about
