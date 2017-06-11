@@ -15,7 +15,7 @@
 			position absolute
 			top 100%
 			left calc(50% - 8px)
-			display block
+			display none
 			size 15px
 			content ''
 			background-color color-page-background
@@ -29,6 +29,12 @@
 			/* stylelint-enable */
 			transform: rotate(45deg)
 
+		&_popup-visible::after
+			display block
+
+		&_popup-visible > .search-page__filter-popup
+			display block
+
 	&__filter-popup
 		position absolute
 		top calc(100% + 8px)
@@ -36,13 +42,17 @@
 		padding-x 25px
 		padding-top 30px
 		padding-bottom 25px
+		display none
 		width 412px
 		background-color color-page-background
 		border 1px solid color-dividers
-		border-radius 2px
 		/* stylelint-disable */
+		border-radius 2px
 		box-shadow 0 4px 8px 0 color-dividers
 		/* stylelint-enable */
+
+		&_visible
+			display block
 
 	&__field-wrapper
 		display flex
@@ -65,6 +75,7 @@
 			text-transform uppercase
 
 	&__input-wrapper
+		position relative
 		padding-x 8px
 		padding-top 8px
 		display flex
@@ -74,10 +85,31 @@
 		font-size 11px
 		line-height 20px
 		background-color white
-		border 1px solid color-dividers
 		/* stylelint-disable */
+		border 1px solid color-dividers
 		border-radius 2px
 		/* stylelint-enable */
+
+	&__input-hint
+		position absolute
+		z-index 1
+		top 100%
+		left -1px
+		padding-x 8px
+		padding-top 4px
+		padding-bottom 5px
+		display none
+		width calc(100% + 2px)
+		height 29px
+		background-color white
+		/* stylelint-disable */
+		border 1px solid color-dividers
+		border-radius 2px
+		/* stylelint-enable */
+		box-shadow 0 4px 8px 0 color-dividers
+
+		&_visible
+			display block
 
 	&__input
 		margin-bottom 8px

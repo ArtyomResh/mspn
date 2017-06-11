@@ -5,12 +5,17 @@ include ../search-table/search-table
 include ../pagination/pagination
 include ../footer/footer
 
-mixin search-from__field(name)
+mixin search-from__field({ name, isHintVisible, hintText, inputText })
 	+e('div').field-wrapper
 		+e('label').label(for='search-filter_#{name}')= name
 		+e.input-wrapper
 			block
-			+e('input').input(type='text' name=name id='search-filter_#{name}')
+			+e('input').input(type='text' name=name id='search-filter_#{name}', value=inputText)
+
+			if isHintVisible
+				+e.input-hint._visible!= hintText
+			else
+				+e.input-hint
 
 mixin search-form__tag(text)
 	+e('span').input-tag= text
@@ -23,18 +28,23 @@ mixin search-page()
 		+content-wrapper
 			+page-title('Search')
 				+tabs
-				+b.search-page__filter-button-wrapper
+				+b.search-page__filter-button-wrapper._popup-visible
 					+button()._filter._small
 						+icon('settings')(width='17px' height='13px')
 						+e.text._filter Search Filters
 					+b.search-page__filter-popup
 						+b('form').search-page__filter-form(action='/' method='get')
-							+search-from__field('composers')
+							+search-from__field({
+									name: 'composers',
+									isHintVisible: true,
+									hintText: 'Wolfgang Amadeus <span class="search__result_match">Mozart</span>',
+									inputText: 'mozart',
+								})
 								+search-form__tag('Anton Bruckner')
-							+search-from__field('forms')
+							+search-from__field({ name: 'forms'})
 								+search-form__tag('Etude')
-							+search-from__field('instruments')
-							+search-from__field('periods')
+							+search-from__field({ name: 'instruments' })
+							+search-from__field({ name: 'periods' })
 								+search-form__tag('20th Century')
 								+search-form__tag('Romantic')
 							+e.sumbit-button

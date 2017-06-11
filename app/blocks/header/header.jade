@@ -12,9 +12,8 @@ mixin header({ isMain, isLogged, isSearching, userLetter })
 				a(href='index.html')
 					+icon('logo')(width='185px' height='24px')
 
-		if isSearching
 		+e.search-wrapper
-			+search
+			+search()
 
 		+e('nav').nav
 			+e('ul').nav-list
