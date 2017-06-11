@@ -11,38 +11,39 @@ mixin result-item({icon, href, resultText, resultAuthor})
 		+e('a').result-link(href=href)!= resultText
 			+e('div').result-author!= resultAuthor
 
-mixin search()
+mixin search(isSearching)
 	+b('form').search&attributes(attributes)
 		block
 		+e('input').search-input(type='search' placeholder='Search...')
 		+icon('search').search-icon_result(width='15px' height='15px')
 
-		+e('ul').result._visible
-			+result-item({
-				icon: 'sheet',
-				href: '/',
-				resultText: '<span class="search__result_match">Piano</span> Sonata no. 14 in C#m "Moonlight", Opening',
-				resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
-				})
-			+result-item({
-				icon: 'note',
-				href: '/',
-				resultText: 'Bagatelle no. 25 "Für Elise", WoO 59',
-				resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
-				})
-			+result-item({
-				icon: 'note',
-				href: '/',
-				resultText: '<span class="search__result_match">Piano</span> Concerto No.3, Op.37',
-				resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
-				})
-			+result-item({
-				icon: 'chain',
-				href: '/',
-				resultText: 'See All Sheet Music by',
-				resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
-				})
-			+e('li').result-item._all
-				+e.result-icon._search
-					+icon('search')(width='15px' height='15px')
-				+e('a').result-all-link(href='/') View All Results
+		if isSearching
+			+e('ul').result._visible
+				+result-item({
+					icon: 'sheet',
+					href: '/',
+					resultText: '<span class="search__result_match">Piano</span> Sonata no. 14 in C#m "Moonlight", Opening',
+					resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
+					})
+				+result-item({
+					icon: 'note',
+					href: '/',
+					resultText: 'Bagatelle no. 25 "Für Elise", WoO 59',
+					resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
+					})
+				+result-item({
+					icon: 'note',
+					href: '/',
+					resultText: '<span class="search__result_match">Piano</span> Concerto No.3, Op.37',
+					resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
+					})
+				+result-item({
+					icon: 'chain',
+					href: '/',
+					resultText: 'See All Sheet Music by',
+					resultAuthor: 'Ludwig van <span class="search__result_match">Beethoven</span>',
+					})
+				+e('li').result-item._all
+					+e.result-icon._search
+						+icon('search')(width='15px' height='15px')
+					+e('a').result-all-link(href='/') View All Results
