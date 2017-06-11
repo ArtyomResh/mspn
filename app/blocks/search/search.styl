@@ -18,6 +18,98 @@
 		font-size 13px
 		line-height 18px
 		border 1px solid color-dividers
+		border-radius 2px
 
 		&::placeholder
 			color brand-gray-disabled
+
+	&__result
+		position absolute
+		z-index 100
+		top calc(100% + 12px)
+		display none
+		width 100%
+		background-color white
+		border 1px solid brand-gray-disabled
+		border-radius 4px
+
+		&_visible
+			display block
+
+		&::after
+			position absolute
+			top -6px
+			left calc(50% - 5px)
+			display block
+			size 10px
+			content ''
+			background-color white
+			/* stylelint-disable */
+			border-top-width 1px
+			border-right-width 0
+			border-bottom-width 0
+			border-left-width 1px
+			border-radius 2px
+			border-style solid
+			border-color brand-gray-disabled
+			/* stylelint-enable */
+			transform: rotate(45deg)
+
+	&__result-item
+		position relative
+		padding-top 10px
+		padding-right 16px
+		padding-left 40px
+		padding-bottom 10px
+		display block
+		width 100%
+		cursor pointer
+
+		&:not(:first-child)
+			/* stylelint-disable */
+			border-top-width 1px
+			border-right-width 0
+			border-bottom-width 0
+			border-left-width 0
+			border-style solid
+			border-color color-dividers
+			/* stylelint-enable */
+
+		&_all
+			padding-top 17px
+			padding-bottom 20px
+
+	&__result-icon
+		position absolute
+		top 12px
+		left 11px
+
+		&_chain
+			top 25px
+
+		&_search
+			top 20px
+
+	&__result-item > &__result-link
+		display block
+		width 100%
+		font-size 13px
+		line-height 20px
+		white-space nowrap
+		text-overflow ellipsis
+		color brand-gray
+		/* stylelint-disable */
+		overflow hidden
+		/* stylelint-enable */
+
+		&:hover
+			text-decoration none
+			color brand-gray
+
+	&__result-author
+		font-size 11px
+		line-height 20px
+		color brand-gray-disabled
+
+	&__result_match
+		font-weight bold
