@@ -1,0 +1,58 @@
+.about
+	display flex
+	flex-direction column
+	justify-content space-between
+	height 100%
+
+	&__background
+		padding-y 50px
+		display block
+		text-align center
+
+	&__text-wrapper
+		margin-x auto
+		margin-bottom 92px
+		max-width 1172px
+
+	&__text
+		font-size 13px
+		line-height 20px
+
+		&:not(:last-child)
+			margin-bottom 20px
+
+	&__features-list
+		margin-x auto
+		margin-bottom 100px
+		display flex
+		justify-content space-between
+		width 100%
+		max-width 1172px
+		min-height 238px
+
+	&__features-item
+		display block
+		height 238px
+
+	&__features-link
+		padding-top 38px
+		display flex
+		flex-direction column
+		align-items center
+		width 253px
+		height 238px
+		border 1px solid color-dividers
+
+	&__features-list &__features-link:hover
+		text-decoration none
+
+	&__features-icon
+		margin-bottom 14px
+
+	&__features-title
+		margin-bottom 5px
+		color brand-blue
+
+	&__features-text
+		max-width 212px
+		color brand-gray
