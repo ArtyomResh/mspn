@@ -1,5 +1,6 @@
 include ../tabs/tabs
 include ../button/button
+include ../header/header
 include ../icon/icon
 include ../search-table/search-table
 include ../pagination/pagination
@@ -25,6 +26,13 @@ mixin search-form__tag(text)
 mixin search-page()
 	+b.search-page&attributes(attributes)
 		block
+		+content-wrapper
+			+header({
+				isLogged: true,
+				isSearching: true,
+				isMain: true,
+				userLetter: 'M'
+			})
 		+content-wrapper
 			+page-title('Search')
 				+tabs
