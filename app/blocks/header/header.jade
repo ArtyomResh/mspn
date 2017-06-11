@@ -13,7 +13,7 @@ mixin header({ isMain, isLogged, isSearching, userLetter })
 					+icon('logo')(width='185px' height='24px')
 
 		+e.search-wrapper
-			+search()
+			+search(isSearching)
 
 		+e('nav').nav
 			+e('ul').nav-list
