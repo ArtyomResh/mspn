@@ -1,0 +1,59 @@
+include ../icon/icon
+include ../header/header
+include ../footer/footer
+include ../player/player
+
+mixin feature-item({ icon, iconWidth, iconHeight, title, url})
+	+b('li').radio-page__features-item
+		+b('a').radio-page__features-link(href=url)
+			+b(class='radio-page__features-icon_#{icon}')
+				//- +icon(icon)(width=iconWidth height=iconHeight)
+			+b.radio-page__features-title= title
+
+mixin radio-page()
+	+b.radio-page&attributes(attributes)
+		block
+		+content-wrapper
+			+header({
+				isLogged: true,
+				isSearching: false,
+				isMain: false,
+				userLetter: 'M'
+			})
+		+e.player-wrapper
+			+player
+
+		+e('main').content
+			+e.info-block
+				+e('h1').info-title Free Streaming Classical Music Radio
+				+e('p').info-text
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+					| laoreet tempus dictum. Suspendisse mattis, eros id facilisis
+					| rutrum, ante elit sodales eros, non malesuada arcu metus ut risus.
+
+				+e.features-wrapper
+					+e('h2').features-heading Listen anywhere, on
+					+e('ul').features-list
+						+feature-item({
+							icon: 'phone',
+							title: 'Phone',
+							url: '#',
+						})
+						+feature-item({
+							icon: 'tablet',
+							title: 'Tablet',
+							url: '#',
+						})
+						+feature-item({
+							icon: 'appletv',
+							title: 'Apple TV',
+							url: '#',
+						})
+
+			+e.advertisment-block
+				+e('span').advertisment-title Advertisment
+				+e('a').advertisment-link
+					img(src='/assets/images/ad.jpg' width='300' height='250' alt='ad')
+
+		+b.footer-wrapper
+			+footer

@@ -35,10 +35,11 @@ padding-y($padding)
 	padding-bottom $padding
 
 // Set one static retina image
-retinaBackground($image, $ext = 'png') {
+retinaBackground($image, $ext = 'png')
 	background-image url('../images/' + $image + '.' + $ext)
 
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 		background-image url('../images/' + $image + '@2x.' + $ext)
-	}
-}
+
+	@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)
+		background-image url('../images/' + $image + '@2x.' + $ext)
