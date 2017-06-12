@@ -1,0 +1,79 @@
+.player
+	margin-x auto
+	padding-x 26px
+	padding-top 24px
+	padding-bottom 36px
+	display block
+	width 538px
+	background rgba(255, 255, 255, .95)
+	box-shadow 0 4px 16px 0 rgba(0, 0, 0, .16)
+	border-radius 8px
+
+	&__artist
+		margin-bottom 13px
+		text-align center
+
+	&__song
+		margin-bottom 13px
+		display block
+		font-size 13px
+		font-weight 600
+		line-height 20px
+		text-align center
+
+	&__performer
+		margin-bottom 27px
+		display block
+		font-size 13px
+		line-height 20px
+		text-align center
+
+	&__timeline
+		position relative
+		margin-bottom 12px
+		display block
+		height 6px
+		border-radius 3px
+		background-color color-dividers
+
+	&__progress-bar
+		position absolute
+		top 0
+		left 0
+		width 35%
+		height 100%
+		border-radius 3px
+		background-color brand-blue
+
+	&__time-counters-wrapper
+		margin-bottom 25px
+		padding-x 10px
+		display flex
+		justify-content space-between
+
+	&__time-counters-item
+		font-size 13px
+		line-height 20px
+
+	&__button
+		border none
+		background-color transparent
+
+		&_invisible
+			display none
+
+	&__controls
+		padding-x 12px
+		display flex
+		align-items center
+
+	&__like-button
+		margin-left auto
+
+	&__play-button,
+	&__pause-button
+		margin-x 58px
+
+	&__volume-wrapper
+		position relative
+		margin-left 88px

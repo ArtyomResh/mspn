@@ -1,0 +1,31 @@
+include ../icon/icon
+
+mixin player()
+	+b.player&attributes(attributes)
+		block
+		+e('audio')#radio-player()
+			source(src='#' type='audio/ogg; codecs=vorbis')
+			source(src='#' type='audio/mpeg')
+		+e#radio-player.player
+			+e('h2').artist Frédéric Chopin
+			+e('span').song Piano Sonata no. 2 in B flat minor ‘Funeral March’, op. 35
+			+e('span').performer Performer:  Paul Pitman
+			+e#radio-player-timeline.timeline
+				+e#radio-player-progress-bar.progress-bar
+			+e.time-counters-wrapper
+				+e('span')#time-counters-progress.time-counters-item 03:24
+				+e('span')#time-counters-whole.time-counters-item 09:11
+			+e.controls
+				+e('button')#radio-player-like.like-button.__button
+					+icon('heart')(width='24px' height='22px')
+				+e('button')#radio-player-play.play-button.__button.__button_invisible
+					+icon('play')(width='65px' height='65px')
+				+e('button')#radio-player-pause.pause-button.__button
+					+icon('pause')(width='65px' height='65px')
+				+e('button')#radio-player-next.next-button.__button
+					+icon('next')(width='20px' height='20px')
+				+e.volume-wrapper
+					+e('button')#radio-player-volume.volume-button.__button
+						+icon('speaker')(width='24px' height='19px')
+					+e#radio-player-volume-line.volume-line
+						+e#radio-player-volume-progress-bar.volume-progress-bar
