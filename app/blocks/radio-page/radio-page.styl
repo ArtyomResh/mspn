@@ -1,0 +1,88 @@
+.radio-page
+	display flex
+	flex-direction column
+	height 100%
+
+	&__player-wrapper
+		margin-bottom 42px
+		padding-y 42px
+		retinaBackground('bg-grass', 'jpg')
+		background-size cover
+
+	&__content
+		margin-x auto
+		margin-bottom 92px
+		display flex
+		max-width 1170px
+		min-height 420px
+
+	&__info-block
+		margin-right 50px
+		max-width 673px
+
+	&__info-title
+		margin-bottom 23px
+
+	&__info-text
+		margin-bottom 51px
+		font-size 13px
+		line-height 20px
+
+	&__advertisment-block
+		max-width 300px
+
+	&__advertisment-title
+		margin-bottom 12px
+		display block
+		font-size 13px
+		line-height 18px
+		text-align center
+		color brand-gray-disabled
+
+	&__features-heading
+		margin-bottom 19px
+
+	&__features-list
+		display flex
+		justify-content space-between
+
+	&__features-link
+		padding-top 65px
+		display block
+		width 207px
+		height 222px
+		text-align center
+		border 1px solid color-dividers
+
+	&__features-item > &__features-link:hover
+		text-decoration none
+
+	&__features-title
+		display block
+		font-size 13px
+		font-weight bold
+		line-height 20px
+		color brand-gray
+
+	&__features-icon
+		margin-x auto
+		display block
+		background-size cover
+
+		&_phone
+			margin-bottom 23px
+			retinaBackground('icon-phone')
+			width 30px
+			height 54px
+
+		&_tablet
+			margin-bottom 15px
+			retinaBackground('icon-tablet')
+			width 42px
+			height 62px
+
+		&_appletv
+			margin-bottom 15px
+			retinaBackground('icon-apple-tv')
+			width 62px
+			height 62px
